@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Churn Prediction</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container mt-5">
+    <h2 class="mb-4">Enter Customer Details</h2>
+    <form method="POST" action="/predict" class="row g-3 bg-white p-4 rounded shadow">
+      <div class="col-md-4">
+        <label class="form-label">Customer ID</label>
+        <input type="text" class="form-control" name="CustomerID" required>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Gender</label>
+        <select class="form-select" name="Gender">
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+          <option value="Alien">Alien</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Age</label>
+        <input type="number" class="form-control" name="Age">
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Tenure</label>
+        <input type="number" class="form-control" name="Tenure">
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Balance</label>
+        <input type="number" step="0.01" class="form-control" name="Balance">
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Number of Products</label>
+        <input type="number" class="form-control" name="NumOfProducts">
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Has Credit Card</label>
+        <select class="form-select" name="HasCrCard">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="Maybe">Maybe</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Is Active Member</label>
+        <select class="form-select" name="IsActiveMember">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="1.0">1.0</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Estimated Salary</label>
+        <input type="number" class="form-control" name="EstimatedSalary">
+      </div>
+      <div class="col-12 text-end">
+        <button type="submit" class="btn btn-primary">Predict</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
